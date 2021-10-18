@@ -1,4 +1,5 @@
 <#ftl output_format="HTML">
+<#import "/_partials.html" as part>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,29 +13,21 @@
     <title>${site.title}</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="nav-menu">
-                <li class="nav-title"><h2>${site.title}</h2></li>
-                <li class="nav-item"><a href="${site.baseUrl}">Home</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
-            </ul class="menu">  
-
-        </nav>
-    </header>
-
+    <@part.header/>
     <div class="main-container">
-        <h1>Welcome to my site!</h1>
-        <p>Hello, I'm Mikulex. This is a personal blog where I share, well, whatever comes to mind. Might be tech related, or something different.</p>
-        <h2>Here are my blog posts</h2>
-        <div class="posts-container">    
-            <#list posts as p>
+            <h1>Welcome to my site!</h1>
+            <div class="index-container"> 
+            <hr>
+            <p>Hello, I'm Mikulex. This is a personal blog where I share, well, whatever comes to mind. Might be tech related, or something different.</p>
+            <h2>Here are my blog posts</h2>
+            <div class="posts-container">    
+                <#list posts?reverse as p>
                 <a class="link-item" href="${p.relativeLink}">${p.title}</a>
                 <span class="date-item">${p.date?string["yyyy-MM-dd"]}</span>
-             </#list>
+                </#list>
+            </div>
         </div>
     </div>
-
-    
+    <@part.footer/>
 </body>
 </html>
