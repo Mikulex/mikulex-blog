@@ -6,10 +6,12 @@ body {
 
 nav {
     position: fixed;
+    display: flex;
     top: 0px;
     left: 0px;
-    width: 100%;
     background-color: rgb(23, 26, 27);
+    height: 80px;
+    width: 100%;
 }
 
 .nav-menu {
@@ -20,27 +22,24 @@ nav {
 }
 
 .nav-item {
-    font-size: 20px;
+    font-size: 1em;
     padding: 5px 15px;
-}
-
-.nav-item a {
-    color: #86cecb;
-}
-
-.nav-item a:hover {
-    animation-name: link;
-    animation-duration: 300ms;
-    animation-fill-mode: forwards;
+    flex-basis: auto;
 }
 
 .nav-title {
-    padding: 0px 10px;
+    font-weight: 600;
+    font-size: 2em;
 }
 
 .main-container {
-    padding-top: 110px;
+    padding-top: 100px;
     text-align: center;
+}
+
+.index-container {
+    width: 75%;
+    margin: 0px auto;
 }
 
 .posts-container {
@@ -54,18 +53,68 @@ nav {
     padding: 5px 10px;
 }
 
-.link-item {
-    color: #86cecb;
+.post-container {
+    width: 75%;
+    text-align: justify;
+    margin: 20px auto;
 }
 
-.link-item:hover {
-    animation-name: link;
-    animation-duration: 300ms;
-    animation-fill-mode: forwards;
+@media (max-width: 1000px) {
+    .post-container {
+        width: 95%;
+    }
+}
+
+.post-title {
+    font-size: 40px;
+    margin: 0.5em 0em;
+}
+
+.post-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.post-metadata {
+    color: #bec8d1;
+}
+
+.post-content {
+    font-size: 20px;
+    padding: 10px 0px;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #bec8d1;
+    padding: 20px;
+    font-size: 0.8em;
 }
 
 @keyframes link {
     100% {
         color: #e12885;
     }
+}
+
+hr {
+    border: 1px solid #e12885;
+}
+
+a {
+    color: #137a7f;
+}
+
+p {
+    padding: 3px;
+}
+
+a:hover {
+    animation-name: link;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
 }
