@@ -1,5 +1,5 @@
 ---
-  baseUrl: https://mikulex.com
+  baseUrl: https://mikulex.com/
   title: Mikulex
-  posts: "posts/"
-  pages: ""
+  posts: "/posts/"
+  pages: "/"
