@@ -85,7 +85,6 @@ nav {
 }
 
 .post-title {
-    font-size: 2em;
     margin: 0px 0px 10px 0px;
 }
 
@@ -94,7 +93,7 @@ nav {
 }
 
 .post-content {
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 10px 0px;
     line-height: 1.6;
 }
@@ -146,4 +145,8 @@ a:hover {
     animation-name: link;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
+}
+
+h1 {
+    font-size: 2em;
 }
