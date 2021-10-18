@@ -1,0 +1,40 @@
+<#ftl output_format="HTML">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>${site.title}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-title"><h2>${site.title}</h2></li>
+                <li class="nav-item"><a href="${site.baseUrl}">Home</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+            </ul class="menu">  
+
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <h1>Welcome to my site!</h1>
+        <p>Hello, I'm Mikulex. This is a personal blog where I share, well, whatever comes to mind. Might be tech related, or something different.</p>
+        <h2>Here are my blog posts</h2>
+        <div class="posts-container">    
+            <#list posts as p>
+                <a class="link-item" href="${p.relativeLink}">${p.title}</a>
+                <span class="date-item">${p.date?string["yyyy-MM-dd"]}</span>
+             </#list>
+        </div>
+    </div>
+
+    
+</body>
+</html>
