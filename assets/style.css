@@ -1,14 +1,14 @@
 body {
     background-color: #1c1e1f;
     font-family: 'Open Sans', sans-serif;
-    color: #86cecb;
+    color: #bec8d1;
 }
 
 nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: rgb(23, 26, 27);
+    background-color: #161819;
     height: 70px;
     width: 100%;
 }
@@ -34,6 +34,7 @@ nav {
     font-weight: 600;
     font-size: 2em;
     margin: 20px;
+    color: #86cecb
 }
 
 .main-container {
@@ -118,7 +119,7 @@ footer {
 .footer-text {
     padding: 10px;
     text-align: center;
-    color: #bec8d1;
+    color: #86cecb;
     font-size: 0.8em;
 }
 
@@ -149,4 +150,13 @@ a:hover {
 
 h1 {
     font-size: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #86cecb;
 }
