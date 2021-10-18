@@ -1,6 +1,6 @@
 ---
 date: 2021-10-16T13:51Z
-title: Welcome To My New Blog
+title: My new Blog site
 ---
 
 Hello! 
