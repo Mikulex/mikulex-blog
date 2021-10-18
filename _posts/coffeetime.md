@@ -5,7 +5,7 @@ title: CoffeeTime and what I've learned
 
 As I've stated on my first post, *CoffeeTime* is a project I've started for various reasons, one of them being practicing *Java* and learning about tools around it, or programming on projects in general instead of some *Python* or *Ruby* scripts.
 
-I'm honestly not that happy with how "glued together" it feels, but I guess mistakes have to be made to actually learn. 
+I'm honestly not that happy with how "glued together" it feels, but I guess mistakes have to be made to actually learn. Also, *CoffeeTime* is by no means finished, some things are still missing, but at least I got so far to get a site up and running, which is pretty cool.
 
 ## Maven
 *Java* was the language of my choice because thats what I've used most for projects. But this time around, I wanted to use one of the popular building tools to learn about it. So I've decided to use *Maven* to manage building *CoffeeTime* and to help me with setting up dependencies. I honestly don't know why I didn't do it for projects I did for lectures in university, because it is indeed way more comfortable to work with. :)  
@@ -41,6 +41,4 @@ I think it's nicer to work with the Stream API instead with loops here, it makes
 
 A side effect of starting your own blog is learning some HTML and CSS. If I would have ended up using an established SSG like *Hugo*, I probably would have ended up writing my own theme too instead of just using a premade one. Makes it a bit more personal :)
 
-The general refresher was neat, but I also went to finally learn a bit about `display: flex` and (although sparingly) `display: grid`. Working with flex is pretty neat.
-
-*CoffeeTime* is by no means finished, some things are still missing, but at least I got so for to got a site up and running, which is pretty cool.
+The general refresher was neat, but I also went to finally learn a bit about `display: flex` and (although sparingly) `display: grid`. Working with flex is pretty neat. Managing spacing between items with the various `justify` and `align` statements is great, as is wrapping items around for more responsive websites.
