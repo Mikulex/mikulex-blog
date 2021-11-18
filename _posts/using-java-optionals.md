@@ -28,7 +28,7 @@ Optional<String> stringOpt = Optional.of("My cool string");
 Optional<Integer> intOpt = Optional.of(2);
 Optional<String> emptyStringOpt = Optional.empty();
 ```
-You can immediatly see that Optionals use generics which show the type it should represent. As for instantiating them, you use `Optional.of()` and pass an argument into it. Calling `Optional.empty()` will create an empty Optional, obviously, and would represent an object being null. Be careful about the `of()` method, since you cant pass `null` into it. Doing so will throw an Exception. But there's another method which covers this case called `ofNullable()`, in which you also pass an argument that may be null.
+You can immediatly see that Optionals use generics which show the type it should represent. As for instantiating them, you use `Optional.of()` and pass an argument into it. Calling `Optional.empty()` will create an empty Optional, obviously, and would represent an object being null. Be careful about the `of()` method, since you can't pass `null` into it. Doing so will throw an Exception. But there's another method which covers this case called `ofNullable()`, in which you also pass an argument that may be null.
 ```java
 MyClass thing = null;
 Optional<MyClass> myOpt = Optional.ofNullable(thing);
