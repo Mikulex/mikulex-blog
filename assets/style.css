@@ -129,12 +129,6 @@ footer {
     font-size: 0.8em;
 }
 
-@keyframes link {
-    100% {
-        color: var(--red);
-    }
-}
-
 hr {
     border: 1px solid var(--red);
 }
@@ -142,6 +136,7 @@ hr {
 a {
     color: #137a7f;
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 p {
@@ -149,9 +144,7 @@ p {
 }
 
 a:hover {
-    animation-name: link;
-    animation-duration: 300ms;
-    animation-fill-mode: forwards;
+    color: var(--red);
 }
 
 h1 {
