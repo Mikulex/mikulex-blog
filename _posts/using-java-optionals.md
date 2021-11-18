@@ -28,7 +28,7 @@ Optional<String> stringOpt = Optional.of("My cool string");
 Optional<Integer> intOpt = Optional.of(2);
 Optional<String> emptyStringOpt = Optional.empty();
 ```
-You can immediatly see that Optionals use generics which show the type it should represent. As for instantiating them, you use `Optional.of()` and pass an argument into it. Calling `Optional.empty()` will create an empty Optional, obviously, and would represent an object being null. Be careful about the `of()` method, since you can't pass `null` into it. Doing so will throw an Exception. But there's another method which covers this case called `ofNullable()`, in which you also pass an argument that may be null.
+You can immediately see that Optionals use generics which show the type it should represent. As for instantiating them, you use `Optional.of()` and pass an argument into it. Calling `Optional.empty()` will create an empty Optional, obviously, and would represent an object being null. Be careful about the `of()` method, since you can't pass `null` into it. Doing so will throw an Exception. But there's another method which covers this case called `ofNullable()`, in which you also pass an argument that may be null.
 ```java
 MyClass thing = null;
 Optional<MyClass> myOpt = Optional.ofNullable(thing);
@@ -70,7 +70,7 @@ String output = myString.orElseThrow(SomeException::new);
 A bit different. Here you won't get the value itself returned, but another Optional containing the value.
 ```java
 Optional<String> myString = Optional.empty();
-Optional<String> anotherString = myString.or(() -> "Empty String!");
+Optional<String> anotherString = myString.or(() -> Optional.of("Empty String!"));
 ```
 
 ## ifPresentOrElse()
@@ -83,8 +83,7 @@ myString.ifPresentOrElse(
         },
     () -> {
         System.out.println("Empty String!");
-        };
-);
+        });
 ```
 
 # Using Optionals properly
@@ -94,13 +93,13 @@ Optionals are good and all, but I think there are a few things that one should n
 ```java
 Optional<String> myString = null;
 ```
-Doing stuff like this is going against what we actually wanted to achieve by using Optionals. Remember, we wanted to go away from manually checking for null values. You are defeating the purpose of that if you need to check for potentional null Optionals. There are `ofNullable()` and `empty()` if you need to work with empty Optionals.
+Doing stuff like this is going against what we actually wanted to achieve by using Optionals. Remember, we wanted to go away from manually checking for null values. You are defeating the purpose of that if you need to check for potential null Optionals. There are `ofNullable()` and `empty()` if you need to work with empty Optionals.
 
 ## Don't overuse it
-Not every potentional null value needs to be an Optional. Being flooded with them in a larger program is probably something you want to avoid. 
+Not every potential null value needs to be an Optional. Being flooded with them in a larger program is probably something you want to avoid. 
 Optionals are meant to be used as return types for methods. Using it as an argument for a method or as a field in your class would overcomplicate things.
 
 # Final Thoughts
-I think that Optionals are a great way for one thing, which is preventing `NullPointerExceptions` caused by methods returning null. `null` always had the problem of not being clear about what it is representing. You don't immediately know if null was returned because something was absent, if something could not be calculated or because of any other reason. Optionals don't help with that clarity, but it helps showing that something may return null at all. This makes Optionals a great return type for methods if they end up needing to return null.
+I think that Optionals are great for one thing, which is preventing `NullPointerExceptions` caused by methods returning null. `null` always had the problem of not being clear about what it is representing. You don't immediately know if null was returned because something was absent, if something could not be calculated or because of any other reason. Optionals don't help with that clarity, but it helps showing that something may return null at all. This makes Optionals a great return type for methods if they end up needing to return null.
 
 But don't overuse them. Sometimes, it probably makes more sense to throw an Exception instead of returning null. 
