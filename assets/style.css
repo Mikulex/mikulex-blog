@@ -1,3 +1,9 @@
+:root {
+    --title: #86cecb;
+    /*--title: #47c8c0; */
+    --red: #e12885;
+}
+
 body {
     background-color: #1c1e1f;
     font-family: 'Open Sans', sans-serif;
@@ -34,7 +40,7 @@ nav {
     font-weight: 600;
     font-size: 2em;
     margin: 20px;
-    color: #86cecb
+    color: var(--title);
 }
 
 .main-container {
@@ -125,13 +131,12 @@ footer {
 
 @keyframes link {
     100% {
-        color: #e12885;
-
+        color: var(--red);
     }
 }
 
 hr {
-    border: 1px solid #e12885;
+    border: 1px solid var(--red);
 }
 
 a {
@@ -159,5 +164,5 @@ h3,
 h4,
 h5,
 h6 {
-    color: #86cecb;
+    color: var(--title);
 }
