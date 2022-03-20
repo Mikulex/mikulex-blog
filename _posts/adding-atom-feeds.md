@@ -30,6 +30,6 @@ Generating a feed actually isn't that hard. At the end of the day, it is just an
 
 </feed>
 ```
-You can check the [docs](https://validator.w3.org/feed/docs/atom.html#person) at the W3 website for the full specification. They also have an [validator](https://validator.w3.org/feed/) to check if your feed conforms to their standard. 
+You can check the [docs](https://validator.w3.org/feed/docs/atom.html) at the W3 website for the full specification. They also have a [validator](https://validator.w3.org/feed/) to check if your feed conforms to their standard. 
 
-As you can see, it isn't that hard to implement yourself. As for *CoffeeTime*, you now have to add an `rssAuthor` and `rssDesription` option to the `config.yml` in order to generate a working Atom XML. Those two fields fill the `Author` and the `subtitle` tags respectively. The `entry` tags get automatically generated for each post you have, pages get ignored. The XML file will be generated together with your html files when you run *CoffeeTime* with the `build` option.
+As you can see, it isn't that hard to implement yourself. As for *CoffeeTime*, you now have to add an `rssAuthor` and `rssDescription` option to the `config.yml` in order to generate a working Atom XML. Those two fields fill the `author` and the `subtitle` tags respectively. The `entry` tags get automatically generated for each post you have, pages get ignored. The XML file will be generated together with your html files when you run *CoffeeTime* with the `build` option.
