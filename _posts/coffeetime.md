@@ -1,5 +1,5 @@
 ---
-date: 2021-10-18T16:43Z
+date: 2021-10-18T16:43:00Z
 title: CoffeeTime and what I've learned
 ---
 
