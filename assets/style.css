@@ -58,7 +58,7 @@ nav {
 .posts-container {
     outline: 2px dashed #137a7f;
     display: grid;
-    width: 25em;
+    width: 26em;
     margin: 20px auto;
     grid-template-columns: 1fr auto;
     grid-gap: 5px 30px;
@@ -141,6 +141,10 @@ a {
 
 p {
     padding: 2px;
+}
+
+.link-item {
+    text-align: left;
 }
 
 a:hover {
